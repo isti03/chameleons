@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChameleonGame.Avalonia", "ChameleonGame.Avalonia\ChameleonGame.Avalonia.csproj", "{A92FD722-F7F8-4967-808A-EBA1B0BFCB5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChameleonGame.Avalonia.Android", "ChameleonGame.Avalonia.Android\ChameleonGame.Avalonia.Android.csproj", "{AFAB30DF-5379-45D2-B1C6-1109FFA326A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChameleonGame.Avalonia.Desktop", "ChameleonGame.Avalonia.Desktop\ChameleonGame.Avalonia.Desktop.csproj", "{2B2FA976-20E7-4075-8EFB-5E0C78895D7B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChameleonGame", "ChameleonGame\ChameleonGame.csproj", "{F6C44358-86FC-4093-AEEB-373FEE41C2AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChameleonGame.Test", "ChameleonGame.Test\ChameleonGame.Test.csproj", "{420E0EEB-80E5-422D-AD40-49809AD038BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A92FD722-F7F8-4967-808A-EBA1B0BFCB5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A92FD722-F7F8-4967-808A-EBA1B0BFCB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A92FD722-F7F8-4967-808A-EBA1B0BFCB5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A92FD722-F7F8-4967-808A-EBA1B0BFCB5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFAB30DF-5379-45D2-B1C6-1109FFA326A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFAB30DF-5379-45D2-B1C6-1109FFA326A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFAB30DF-5379-45D2-B1C6-1109FFA326A7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AFAB30DF-5379-45D2-B1C6-1109FFA326A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFAB30DF-5379-45D2-B1C6-1109FFA326A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFAB30DF-5379-45D2-B1C6-1109FFA326A7}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2B2FA976-20E7-4075-8EFB-5E0C78895D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B2FA976-20E7-4075-8EFB-5E0C78895D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B2FA976-20E7-4075-8EFB-5E0C78895D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B2FA976-20E7-4075-8EFB-5E0C78895D7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6C44358-86FC-4093-AEEB-373FEE41C2AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C44358-86FC-4093-AEEB-373FEE41C2AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C44358-86FC-4093-AEEB-373FEE41C2AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C44358-86FC-4093-AEEB-373FEE41C2AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{420E0EEB-80E5-422D-AD40-49809AD038BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{420E0EEB-80E5-422D-AD40-49809AD038BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{420E0EEB-80E5-422D-AD40-49809AD038BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{420E0EEB-80E5-422D-AD40-49809AD038BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E745D9F-CD51-43A3-9468-2E3354576EAA}
+	EndGlobalSection
+EndGlobal

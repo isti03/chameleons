@@ -1,0 +1,96 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:ChameleonGame.Avalonia.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="ChameleonGame.Avalonia.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+
+		<WrapPanel Grid.Row="0" Orientation="Horizontal">
+			<ComboBox SelectedIndex="1">
+				<ComboBoxItem IsSelected="{Binding NewGameEasy}">Könnyű játék</ComboBoxItem>
+				<ComboBoxItem IsSelected="{Binding NewGameMedium}">Közepes játék</ComboBoxItem>
+				<ComboBoxItem IsSelected="{Binding NewGameHard}">Nehéz játék</ComboBoxItem>
+			</ComboBox>
+			<Button Command="{Binding NewGameCommand}" CommandParameter="{Binding NewGameSize}">Új játék</Button>
+			<Button Command="{Binding LoadGameCommand}">Játék betöltése</Button>
+			<Button Command="{Binding SaveGameCommand}">Játék mentése</Button>
+		</WrapPanel>
+
+		<Viewbox Grid.Row="1">
+			<ItemsControl ItemsSource="{Binding Fields}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<UniformGrid Rows="{Binding BoardSize}" Columns="{Binding BoardSize}"/>
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+				<ItemsControl.ItemTemplate>
+					<DataTemplate>
+						<Button Command="{Binding FieldClickCommand}" CommandParameter="{Binding}" Focusable="False">
+							<Button.Styles>
+								<!-- Canvas background -->
+								<Style Selector="Canvas">
+									<Setter Property="Background" Value="LightGray"/>
+								</Style>
+								<Style Selector="Canvas.RedField">
+									<Setter Property="Background" Value="LightPink"/>
+								</Style>
+								<Style Selector="Canvas.GreenField">
+									<Setter Property="Background" Value="LightGreen"/>
+								</Style>
+								<!-- Ellipse color -->
+								<Style Selector="Ellipse.RedChameleon">
+									<Setter Property="Fill" Value="OrangeRed"/>
+								</Style>
+								<Style Selector="Ellipse.GreenChameleon">
+									<Setter Property="Fill" Value="GreenYellow"/>
+								</Style>
+								<!-- Ellipse stroke -->
+								<Style Selector="Ellipse">
+									<Setter Property="StrokeThickness" Value="2"/>
+								</Style>
+								<Style Selector="Ellipse.Selected">
+									<Setter Property="StrokeThickness" Value="6"/>
+								</Style>
+							</Button.Styles>
+							<Button.Template>
+								<ControlTemplate>
+									<Canvas Width="100" Height="100" Classes.RedField="{Binding IsRedField}" Classes.GreenField="{Binding IsGreenField}">
+										<Ellipse 
+											Canvas.Left="20" Canvas.Top="20" 
+											Width="60" Height="60" 
+											Stroke="Black" 
+											Classes.RedChameleon="{Binding HasRedChameleon}"
+											Classes.GreenChameleon="{Binding HasGreenChameleon}"
+											Classes.Selected="{Binding IsSelected}"
+											IsVisible="{Binding HasChameleon}" />
+									</Canvas>
+								</ControlTemplate>
+							</Button.Template>
+						</Button>
+					</DataTemplate>
+				</ItemsControl.ItemTemplate>
+			</ItemsControl>
+		</Viewbox>
+
+		<Border Grid.Row="2" BorderBrush="Black" BorderThickness="0 1 0 0">
+			<StackPanel  Orientation="Horizontal">
+				<TextBlock Text="Current player: " Margin="10 2 2 2" />
+				<TextBlock Text="{Binding CurrentPlayer}" Margin="2" />
+			</StackPanel>
+		</Border>
+	</Grid>
+</UserControl>
