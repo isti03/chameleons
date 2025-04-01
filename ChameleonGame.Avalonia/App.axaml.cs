@@ -76,7 +76,7 @@ public partial class App : Application
                 {
                     if (args.Kind == ActivationKind.Background)
                     {
-                        // betöltjük a felfüggesztett játékot, amennyiben van
+                        // load the suspended game if exists
                         try
                         {
                             await model.LoadGame(
@@ -92,7 +92,7 @@ public partial class App : Application
                     if (args.Kind == ActivationKind.Background)
                     {
 
-                        // elmentjük a jelenleg folyó játékot
+                        // save the game to a suspended state
                         try
                         {
                             await model.SaveGame(Path.Combine(AppContext.BaseDirectory, "SuspendedGame"));

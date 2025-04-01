@@ -21,13 +21,13 @@
 
 		<WrapPanel Grid.Row="0" Orientation="Horizontal">
 			<ComboBox SelectedIndex="1">
-				<ComboBoxItem IsSelected="{Binding NewGameEasy}">Könnyű játék</ComboBoxItem>
-				<ComboBoxItem IsSelected="{Binding NewGameMedium}">Közepes játék</ComboBoxItem>
-				<ComboBoxItem IsSelected="{Binding NewGameHard}">Nehéz játék</ComboBoxItem>
+				<ComboBoxItem IsSelected="{Binding NewGameEasy}">Easy game</ComboBoxItem>
+				<ComboBoxItem IsSelected="{Binding NewGameMedium}">Medium game</ComboBoxItem>
+				<ComboBoxItem IsSelected="{Binding NewGameHard}">Hard game</ComboBoxItem>
 			</ComboBox>
-			<Button Command="{Binding NewGameCommand}" CommandParameter="{Binding NewGameSize}">Új játék</Button>
-			<Button Command="{Binding LoadGameCommand}">Játék betöltése</Button>
-			<Button Command="{Binding SaveGameCommand}">Játék mentése</Button>
+			<Button Command="{Binding NewGameCommand}" CommandParameter="{Binding NewGameSize}">New game</Button>
+			<Button Command="{Binding LoadGameCommand}">Load game</Button>
+			<Button Command="{Binding SaveGameCommand}">Save game</Button>
 		</WrapPanel>
 
 		<Viewbox Grid.Row="1">
