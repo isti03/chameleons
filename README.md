@@ -3,6 +3,10 @@
 Simple board game implemented as an assignment for the Event-driven 
 applications class at ELTE in my 3rd semester of university. 
 
+## The game in action
+
+[ChameleonGame.webm](https://github.com/user-attachments/assets/5acca509-8912-4a65-bbfe-c61a342f8051)
+
 ## Task description
 
 Let's write a program to play the following two-player boardgame. Given
